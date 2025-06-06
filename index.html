@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Solicite agora seu frete com preço fixo! WS Transportes atende Jundiaí, SP e região com mudança, embalagem e carga. Orçamento direto no WhatsApp!">
+  <title>WS Transportes | Frete Compartilhado Jundiaí e Grande SP</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    h2 {
+      color: #16a085;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+    }
+    ul li::before {
+      content: "✔️ ";
+      color: #27ae60;
+    }
+    .cta-button {
+      display: inline-block;
+      background-color: #25D366;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-top: 20px;
+    }
+    .cta-button:hover {
+      background-color: #1ebc59;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      font-size: 24px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      z-index: 1000;
+      text-decoration: none;
+    }
+    .whatsapp-float:hover {
+      background-color: #1ebc59;
+    }
+    form {
+      margin-top: 30px;
+      text-align: left;
+    }
+    form label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    form button {
+      background-color: #25D366;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: #1ebc59;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+  <script>
+    function enviarParaWhatsApp(event) {
+      event.preventDefault();
+      const nome = document.getElementById('nome').value;
+      const telefone = document.getElementById('telefone').value;
+      const origem = document.getElementById('origem').value;
+      const destino = document.getElementById('destino').value;
+      const itens = document.getElementById('itens').value;
+      const ajudante = document.getElementById('ajudante').value;
+
+      const mensagem = `*Orçamento WS Transportes*%0A` +
+                       `👤 Nome: ${nome}%0A` +
+                       `📞 Telefone: ${telefone}%0A` +
+                       `📍 Origem: ${origem}%0A` +
+                       `🏁 Destino: ${destino}%0A` +
+                       `📦 Itens: ${itens}%0A` +
+                       `🧍‍♂️ Ajudante: ${ajudante}`;
+
+      const url = `https://wa.me/5511945146787?text=${mensagem}`;
+      window.open(url, '_blank');
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>WS TRANSPORTES</h1>
+    <h2>Mudanças | Frete Compartilhado | Embalagem Profissional</h2>
+    <p><strong>Fretes com rotas fixas Jundiaí ⇄ Grande São Paulo</strong></p>
+    <p>Transporte com preço fixo e atendimento imediato!</p>
+
+    <h2>Nossos Serviços:</h2>
+    <ul>
+      <li>Fretes compartilhados com valores acessíveis</li>
+      <li>Mudanças residenciais e comerciais</li>
+      <li>Serviço completo de embalagem profissional</li>
+      <li>Carga e descarga com equipe treinada</li>
+      <li>Venda de insumos: papelão, plástico bolha, fita, caixas</li>
+    </ul>
+
+    <h2>Veículos próprios:</h2>
+    <ul>
+      <li>Fiorino</li>
+      <li>Ford Courier</li>
+      <li>Iveco Baú</li>
+    </ul>
+
+    <a class="cta-button" href="https://wa.me/5511945146787" target="_blank">💬 CHAMAR NO WHATSAPP</a>
+
+    <form onsubmit="enviarParaWhatsApp(event)">
+      <h2>Solicite seu orçamento rápido:</h2>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+      <label for="telefone">Telefone / WhatsApp:</label>
+      <input type="tel" id="telefone" name="telefone" required>
+      <label for="origem">Endereço de Origem:</label>
+      <input type="text" id="origem" name="origem" required>
+      <label for="destino">Endereço de Destino:</label>
+      <input type="text" id="destino" name="destino" required>
+      <label for="itens">Quais itens deseja transportar?</label>
+      <textarea id="itens" name="itens" rows="4"></textarea>
+      <label for="ajudante">Precisa de ajudante?</label>
+      <select id="ajudante" name="ajudante">
+        <option value="Sim">Sim</option>
+        <option value="Não">Não</option>
+      </select>
+      <button type="submit">Enviar orçamento</button>
+    </form>
+
+    <footer>
+      <p>WS Transportes – Conectando destinos com confiança.</p>
+    </footer>
+  </div>
+  <a class="whatsapp-float" href="https://wa.me/5511945146787" target="_blank" aria-label="Chamar no WhatsApp">💬</a>
+</body>
+</html>
